@@ -1,13 +1,21 @@
 body {
-  padding: 10px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  position:relative; /*for scrollspy*/
 }
 
 a {
   color: #00B7FF;
 }
 
-/*img.carousel {
+img.carousel {
   height: auto;
   width: 100%;
-}*/
+}
+
+.scrollspy-example {
+    position: relative;
+    height: 400px;
+    margin-top: 10px;
+    overflow: auto
+}
