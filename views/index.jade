@@ -1,11 +1,19 @@
 extends layout 
 
 block content
-  nav#navbar-ar.navbar.navbar-fixed-top
-    .container-fluid     
-      .collapse.navbar-collapse
-        ul.nav.navbar-nav
-          li.active
+  nav#navbar-ar.navbar.navbar-inverse.navbar-fixed-top
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', 
+                                data-toggle='collapse', 
+                                data-target='#navbar-ar-collapse-1')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      #navbar-ar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-left
+          li#first-link.active
             a(href='#photos') Photos
           |         
           li
@@ -14,19 +22,19 @@ block content
           li
             a(href='#description') Description
           |             
-          li
+          li#last-link
             a(href='#reviews') Reviews
-    .scrollspy-example(data-spy='scroll', 
-                       data-target='#navbar-ar', 
+  .container-fluid.scrollspy-ar(data-spy='scroll', 
+                       data-target='#navbar-ar',
                        data-offset='0')
-      h4#photos Photos
-      //- include ../views/includes/carousel
-      h4#highlights Highlights
-      //- include ../views/includes/highlights
-      h4#description Description
+    .row#photos
+      include ../views/includes/carousel
+    .row#highlights
+      include ../views/includes/highlights
+    .row#description
       include ../views/includes/description
-      h4#reviews Reviews
-      //- include ../views/includes/reviews
+    .row#reviews
+      include ../views/includes/reviews
       //- h4#photos Photos
       //- include ../views/includes/photos
 

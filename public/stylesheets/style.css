@@ -1,7 +1,7 @@
 body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  position:relative; /*for scrollspy*/
+  position: relative; /*for scrollspy*/
 }
 
 a {
@@ -13,9 +13,14 @@ img.carousel {
   width: 100%;
 }
 
-.scrollspy-example {
-    position: relative;
-    height: 400px;
-    margin-top: 10px;
-    overflow: auto
+.scrollspy-ar {
+  position: relative;
+  /*margin-top: 50px;*/
+  overflow: auto
+}
+
+#description {
+  background-color: #f5f5f5;
+  border-top: 1px solid #DCE0E0;
+  border-bottom: 1px solid #DCE0E0;
 }
