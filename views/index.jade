@@ -2,6 +2,9 @@ extends layout
 
 block content
   nav#navbar-ar.navbar.navbar-inverse.navbar-fixed-top
+    .container-fluid#promotion-bar 
+      .row#promotion-bar-special 
+        a(href='#highlights') Book Now and Get 10% off! - Promotion ends soon
     .container-fluid
       .navbar-header
         button.navbar-toggle.collapsed(type='button', 
@@ -11,10 +14,12 @@ block content
           span.icon-bar
           span.icon-bar
           span.icon-bar
+        a.navbar-brand(href='#highlights') $365/night 
+
       #navbar-ar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-left
           li#first-link.active
-            a(href='#photos') Photos
+            a(href='#home') Home
           |         
           li
             a(href='#highlights') Highlights
@@ -22,17 +27,27 @@ block content
           li
             a(href='#description') Description
           |             
+          li
+            a(href='#owner') Owner
+          |             
+          li
+            a(href='#location') Location
+          |             
           li#last-link
             a(href='#reviews') Reviews
   .container-fluid.scrollspy-ar(data-spy='scroll', 
                        data-target='#navbar-ar',
                        data-offset='0')
-    .row#photos
-      include ../views/includes/carousel
+    .row#home
+      include ../views/includes/home
     .row#highlights
       include ../views/includes/highlights
     .row#description
       include ../views/includes/description
+    .row#owner
+      include ../views/includes/owner
+    .row#location
+      include ../views/includes/location
     .row#reviews
       include ../views/includes/reviews
       //- h4#photos Photos

@@ -47,12 +47,15 @@ $(window).on('load',function(){
         fixSpy(true);
     });          
 
-    $('.navbar li a').click(function (event) {
+    // All the anchors on the page that link to the page's sections are handled 
+    // by this function. Otherwise, the navbar height is ignored.
+    // To find out more on the selector "a[href^='#']": http://api.jquery.com/attribute-starts-with-selector/
+    $("a[href^='#']").click(function (event) {
         var scrollPos = $('body > .scrollspy-ar').find($(this).attr('href')).offset().top - (offset - 1);
         $('body,html').animate({
             scrollTop: scrollPos
-        }, 500, function () {
+        }, 100, function () {
             $(".btn-navbar").click();
         });
-    });          
+    });
 });    
