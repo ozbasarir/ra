@@ -66,7 +66,8 @@ $('#siteModal').on('show.bs.modal', function (event) {
   var modal = $(this)
   switch(button.data('whatever')) {
     case 'googleMap':
-      modal.find('.modal-body').html('<div class="embed-responsive embed-responsive-4by3"><iframe src=\'https://www.google.com/maps/embed/v1/view?zoom=15&center=37.7763%2C-122.4346&key=AIzaSyBxtYBTK2ZJ-EjqsEtjbrh-iCJRsERUCKw\'></iframe></div>')
+      var apiToken = window.apiToken;
+      modal.find('.modal-body').html('<div class="embed-responsive embed-responsive-4by3"><iframe src=\'https://www.google.com/maps/embed/v1/view?zoom=15&center=37.7763%2C-122.4346&key='+apiToken+'\'></iframe></div>')
       break;
     case 'carousel':
       modal.find('.modal-body').load('/carousel')
