@@ -1,20 +1,12 @@
-.col-sm-offset-1.col-sm-8
-  .row.row-space-4.row-space-top-4
-    .col-sm-4.text-center
+.col-sm-offset-1.col-sm-10
+  .row.row-space-0
+    .col-sm-3.text-center
       a#owner-profile.margin-top-3(href='#owner')
         img#owner-profile-image(src='/images/family.jpg')
       a(href='#owner')
         h3.margin-top-1
           small Peggy & Oz
-      h4.margin-top-1#contact-info
-        a(href!='mailto:&#112;&#101;&#103;&#103;&#121;&#111;&#122;&#115;&#117;&#97;&#100;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;') 
-          span.email-icon
-            i.glyphicon.glyphicon-envelope
-            |  CONTACT US
-        .phone-icon.margin-top-1
-          i.glyphicon.glyphicon-phone
-          span 1-415-425-8658
-    .col-sm-8.text-center
+    .col-sm-9.text-center
       .row.h3 Victorian Flat in Historic Alamo Square
         p.small 
           | San Francisco, California 
@@ -27,21 +19,39 @@
               i.glyphicon.glyphicon-star
             | (93)  
       .row.row-space-top-2.h3
-        .col-sm-4.small
+        .col-xs-4.small
           .highlights-icon
             i.glyphicon.glyphicon-user
           p Sleeps up to 8
-        .col-sm-4.small
+        .col-xs-4.small
           .highlights-icon
             i.glyphicon.glyphicon-bed
           p 4 bedrooms
-        .col-sm-4.small
+        .col-xs-4.small
           img.bath-icon(src='/images/icons/64x64_bathroom.png')
           p 2 bathrooms
+      hr
       .row.h4
-        p.small
-          | Refundable Damage Deposit: $400, Cleaning Fee: $165
+        span.small Refundable Damage Deposit: $400
+        span.hidden-xs.small
+          |, 
+        .clearfix.visible-xs-block 
+        span.small Cleaning Fee: $165
         p.small
           | Taxes: Included
-  .row
-    br
+      hr
+      .row.margin-top-1
+        .col-sm-6
+          h5
+            a(href!='mailto:&#112;&#101;&#103;&#103;&#121;&#111;&#122;&#115;&#117;&#97;&#100;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;') 
+              span.email-icon
+                i.glyphicon.glyphicon-envelope
+                |  CONTACT US
+        .col-sm-6
+          h5
+            .phone-icon
+              i.glyphicon.glyphicon-phone
+              span 1-415-425-8658
+      .row
+        h6
+          i We respond quickly!

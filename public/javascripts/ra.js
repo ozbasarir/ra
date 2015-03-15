@@ -59,3 +59,19 @@ $(window).on('load',function(){
         });
     });
 });    
+
+// from http://getbootstrap.com/javascript/#modals-examples
+$('#siteModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var modal = $(this)
+  switch(button.data('whatever')) {
+    case 'googleMap':
+      modal.find('.modal-body').html('<div class="embed-responsive embed-responsive-4by3"><iframe src=\'https://www.google.com/maps/embed/v1/view?zoom=15&center=37.7763%2C-122.4346&key=AIzaSyBxtYBTK2ZJ-EjqsEtjbrh-iCJRsERUCKw\'></iframe></div>')
+      break;
+    case 'carousel':
+      modal.find('.modal-body').load('/carousel')
+      break;
+    default:
+      modal.find('.modal-body').html('No related modal content found')
+  }    
+})
