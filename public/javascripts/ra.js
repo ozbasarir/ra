@@ -20,8 +20,9 @@ $(window).on('load',function(){
 
             // Enable scrollSpy with correct offset based on height of navbar
             $body.scrollspy({ target: '#navbar-ar', offset: offset });
-
-            $('.scrollspy-ar').css('margin-top', offset);
+            // Apply only to .container-fluid (not .container, which is all the 
+            // content below the home image) which is the home image under the navbar
+            $('.container-fluid.scrollspy-ar').css('margin-top', offset);
 
             if(navCollapsed) {
               $body.css('padding-top', offset);
@@ -76,3 +77,25 @@ $('#siteModal').on('show.bs.modal', function (event) {
       modal.find('.modal-body').html('No related modal content found')
   }    
 })
+
+$('#contact-by-email').on('click', function() {
+  ga('send', 'event', 'link', 'click', 'contact-by-email'
+    // , { 'hitCallback': function() { alert('hit sent'); } }
+    );
+});
+
+$('#contact-by-phone').on('click', function() {
+  ga('send', 'event', 'link', 'click', 'contact-by-phone');
+});
+
+$('#promotion-link').on('click', function() {
+  ga('send', 'event', 'link', 'click', 'promotion-link');
+});
+
+$('#brand-price-link').on('click', function() {
+  ga('send', 'event', 'link', 'click', 'brand-price-link');
+});
+
+$('#reviews-link').on('click', function() {
+  ga('send', 'event', 'link', 'click', 'reviews-link');
+});
