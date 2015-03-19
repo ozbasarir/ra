@@ -5,7 +5,10 @@
       .col-sm-4
       .col-sm-8.col-xs-12
         a(data-toggle='modal', data-target='#siteModal', data-whatever='carousel')
-          img.img-responsive.clickable(src='/images/flat/frontview.jpg', alt='Historic Victorian')
+          #about-img-outline
+            i.glyphicon.glyphicon-chevron-left.clickable
+            i.glyphicon.glyphicon-chevron-right.clickable
+            img.img-responsive.clickable(src='/images/flat/frontview.jpg', alt='Historic Victorian')
     .row
       hr
       .col-sm-4
@@ -40,7 +43,7 @@
         p Our flat and garden will offer a tranquil place for rest and relaxation in the midst of this exciting and beautiful city.
         p 4 Bedrooms with 2 queen beds, 2 twin beds, twin-over-twin bunk bed.
         p High chair and crib available upon request.
-    .row
+    .row.hidden
       hr
       .col-sm-4
         .h3.margin-top-0

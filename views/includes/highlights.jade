@@ -17,7 +17,7 @@
               i.glyphicon.glyphicon-star
               i.glyphicon.glyphicon-star
               i.glyphicon.glyphicon-star
-            | (93)  
+            | (99)  
       .row.row-space-top-2.h3
         .col-xs-4.text-center.small
           .highlights-icon
@@ -31,27 +31,35 @@
           img.bath-icon(src='/images/icons/64x64_bathroom.png')
           p 2 bathrooms
       hr
-      .row.h4.text-center
-        span.small Refundable Damage Deposit: $400
-        span.hidden-xs.small
-          |, 
-        .clearfix.visible-xs-block 
-        span.small Cleaning Fee: $165
-        p.small
-          | Taxes: Included
+      .row.h4
+        .col-xs-6.small
+          p Nightly Rate: $365
+          p Taxes: Included
+        .col-xs-6.small
+          p Refundable Deposit: $400
+          p Cleaning Fee: $165
       hr
-      .row.margin-top-1.text-center
-        .col-sm-6
+      .row.margin-top-0
+        .col-xs-6.visible-xs
+          a#owner-profile.margin-top-0(href='#owner')
+            img#owner-profile-image(src='/images/family.jpg')
+          a(href='#owner')
+            h3.margin-top-1
+              small Peggy & Oz
+        .col-sm-6.col-xs-6
           h5
-            a#contact-by-email(href!='mailto:#{email}') 
-              span.email-icon
-                i.glyphicon.glyphicon-envelope
-                |  CONTACT US
-        .col-sm-6
-          h5
-            .phone-icon#contact-by-phone
-              i.glyphicon.glyphicon-phone
-              span 1-415-425-8658
+            p
+              a#contact-by-email(href!='mailto:#{email}') 
+                span.email-icon
+                  i.glyphicon.glyphicon-envelope
+                  |  CONTACT US
+            p
+              .phone-icon#contact-by-phone
+                i.glyphicon.glyphicon-phone
+                span 1-415-425-8658
+          h6.visible-xs
+            i We respond quickly!
+        .col-sm-6.hidden-xs
+          h6
+            i We respond quickly!
       .row.text-center
-        h6
-          i We respond quickly!
